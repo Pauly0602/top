@@ -36,24 +36,24 @@
 
     <h3>Links</h3>
     <ul>
-      <li><a href="https://weit-weg.reisen/picton-das-tor-zur-suedinsel-teil-1/"> Weit weg reisen</a></li>
-      <li><a href="https://www.gotonewzealand.de/picton/">Go to new zealand</a></li>
-      <li><a href="https://www.rundreisen.de/de/rundreisen/rundreisen-angebote/neuseeland/suedinsel-picton.html">Rundreisen</a></li>
+      <li><a href="https://www.berge-meer.de/info/azoren"> Berge und Meer</a></li>
+      <li><a href="https://www.seabreeze.travel/azoren/inseln/">Seabreeze Travel</a></li>
+      <li><a href="https://www.visitazores.com/de">Visit Azores</a></li>
       <footer>
         <nav>
-            <a href="https://cs4151.github.io/nz/">Vorherige Etappe</a>
-            <a href="https://pauly0602.github.io/nz/">Diese Etappe</a>
-            <a href="https://lujehle.github.io/nz/">Nächste Etappe</a>
+            <a href="https://cs4151.github.io/top/">Vorherige Etappe</a>
+            <a href="https://pauly0602.github.io/top/">Diese Etappe</a>
+            <a href="https://lujehle.github.io/top/">Nächste Etappe</a>
         </nav>
       </footer>
 
       <script>
-        var map = L.map('map').setView([-41.293056, 174.001944], 11);
+        var map = L.map('map').setView([37.771389,-25.461944], 11);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       }).addTo(map);
-      var marker = L.marker([-41.293056, 174.001944]).addTo(map);
+      var marker = L.marker([37.771389, -25.461944]).addTo(map);
       marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
         </script>
     </ul>
