@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azoren - São Miguel</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+ crossorigin=""></script>
+</head>
+
+<body>
+    <header>
+      <!--https://pixabay.com/de/photos/natur-landschaft-lake-of-fire-3595382/-->
+<img src="images/header.jpg.jpg" alt="Lagoa do Fogo">
+<!--https://pixabay.com/de/photos/gorilla-silberr%C3%BCcken-affe-primas-448731/ -->
+<a href="https://github.com/pauly0602"><img src="images/user.jpg.jpg" alt="Gorilla"></a>
+    </header>
+    <main>
+      <article>
+    <h1>Azoren</h1>
+    <h2>São Miguel</h2>
+    <p><strong>São Miguel</strong><em> (zu Deutsch Sankt Michael)</em> ist die größte Insel der <strong>Azoren</strong>. Sie zählt zur Ostgruppe des Archipels und hat eine Fläche von 746,8 Quadratkilometern. Die Insel ist 63,7 km lang und 16,1 km breit. Auf São Miguel lebten 2016 etwa 138.000 Menschen, rund 68.000 davon in der Hauptstadt <strong>Ponta Delgada</strong>.</p>
+    <a href="https://de.wikipedia.org/wiki/S%C3%A3o_Miguel">Quelle: Wikipedia</a>
+    <figure>
+      <img src="images/attraction.jpg.jpg" alt="Landschaft auf der Insel"> </figure>
+    </figure>
+    <figcaption>
+      <figure>Landschaft auf São Miguel (Quelle: <a href="https://pixabay.com/de/photos/azoren-wolke-gras-gr%C3%BCn-hecke-5198600/")>Pixabay)</a></figure>
+    </figcaption>
+    <h3>Übersichtskarte</h3>
+    <div id="map" style="width: 900px;height: 600px; border: 1px solid silver"></div>
+
+    <h3>Links</h3>
+    <ul>
+      <li><a href="https://www.berge-meer.de/info/azoren"> Berge und Meer</a></li>
+      <li><a href="https://www.seabreeze.travel/azoren/inseln/">Seabreeze Travel</a></li>
+      <li><a href="https://www.visitazores.com/de">Visit Azores</a></li>
+      </ul>
+      </article>
+    </main>
+      <footer>
+        <nav>
+            <a href="https://cs4151.github.io/top/">Vorherige Etappe</a>
+            <a href="https://pauly0602.github.io/top/">Diese Etappe</a>
+            <a href="https://lujehle.github.io/top/">Nächste Etappe</a>
+        </nav>
+      </footer>
+
+      <script>
+        var map = L.map('map').setView([37.771389,-25.461944], 11);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+      var marker = L.marker([37.771389, -25.461944]).addTo(map);
+      marker.bindPopup("<b>Welcome to São Miguel!</b><br>I am the largest Island of the Azores.").openPopup();
+        </script>
+    </ul>
+  
+</body>
+</html>
