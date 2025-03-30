@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azoren - São Miguel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css"> 
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
-     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <!-- Make sure you put this AFTER Leaflet's CSS-->
  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
  crossorigin=""></script>
+  <script defer src="main.js" ></script>
+
 </head>
 
 <body>
     <header>
-      <!--https://pixabay.com/de/photos/natur-landschaft-lake-of-fire-3595382/-->
-<img src="images/header.jpg" alt="Lagoa do Fogo">
+      <!--Banner 1280x365 und Userbild 100x100-->
+      <img src="images/header.jpg" alt="Lagoa do Fogo">
 <!--https://pixabay.com/de/photos/gorilla-silberr%C3%BCcken-affe-primas-448731/ -->
 <a href="https://github.com/pauly0602"><img src="images/user.jpg" alt="Gorilla"></a>
     </header>
     <main>
       <article>
+        <!-- Inhalt der Seite mit Text, Bild, Karte und Links-->
     <h1>Azoren</h1>
     <h2>São Miguel</h2>
     <p><strong>São Miguel</strong><em> (zu Deutsch Sankt Michael)</em> ist die größte Insel der <strong>Azoren</strong>. Sie zählt zur Ostgruppe des Archipels und hat eine Fläche von 746,8 Quadratkilometern. Die Insel ist 63,7 km lang und 16,1 km breit. Auf São Miguel lebten 2016 etwa 138.000 Menschen, rund 68.000 davon in der Hauptstadt <strong>Ponta Delgada</strong>.</p>
@@ -30,9 +36,10 @@
       <img src="images/attraction.jpg" alt="Landschaft auf der Insel"> </figure>
     </figure>
     <figcaption>
-      <figure>Landschaft auf São Miguel (Quelle: <a href="https://pixabay.com/de/photos/azoren-wolke-gras-gr%C3%BCn-hecke-5198600/")>Pixabay)</a></figure>
-    </figcaption>
-    <h3>Übersichtskarte</h3>
+      <i class="fa-solid fa-camera-retro"></i> Landschaft auf São Miguel </figcaption> <a href="https://pixabay.com/de/photos/azoren-wolke-gras-gr%C3%BCn-hecke-5198600/">(Quelle:Pixabay)</a>
+    </figure>
+    
+    <h3><i class="fa-solid fa-map"></i> Übersichtskarte</h3>
     <div id="map" style="width: 900px;height: 600px; border: 1px solid silver"></div>
 
     <h3>Links</h3>
@@ -44,10 +51,11 @@
       </article>
     </main>
       <footer>
+        <!-- Navigation zu Nachbar:innen -->
         <nav>
-            <a href="https://cs4151.github.io/top/">Vorherige Etappe</a>
-            <a href="https://pauly0602.github.io/top/">Diese Etappe</a>
-            <a href="https://lujehle.github.io/top/">Nächste Etappe</a>
+            <a href="https://cs4151.github.io/top/"><i class="fa-solid fa-arrow-left"></i> Vorherige Etappe </a>
+            <a href="https://pauly0602.github.io/top/"><i class="fa-solid fa-house"></i> Diese Etappe </a>
+            <a href="https://lujehle.github.io/top/">Nächste Etappe <i class="fa-solid fa-arrow-right"></i></a>
         </nav>
       </footer>
 
