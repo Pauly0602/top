@@ -2,11 +2,11 @@
 Skript für Lieblingsort 
 */
 let stop = {
-  title: "Picton",
+  title: "Azoren",
   user: "pauly0602",
   nr: 10,
-  lat: -41.29,
-  lng: 174.0,
+  lat: 37.77,
+  lng: -25.46,
   zoom: 11,
 };
 
