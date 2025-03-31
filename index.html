@@ -64,6 +64,14 @@
         </nav>
       </footer>
  </ul>
-  
+ <script>
+  var map = L.map('map').setView([37.771389,-25.461944], 11);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+var marker = L.marker([37.771389, -25.461944]).addTo(map);
+marker.bindPopup("<b> Willkommen auf São Miguel! Ich bin die größte Insel der Azoren.</b>").openPopup();
+  </script>
 </body>
 </html>
