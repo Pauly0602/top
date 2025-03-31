@@ -40,7 +40,12 @@
     </figure>
     
     <h3><i class="fa-solid fa-map"></i> Übersichtskarte</h3>
-    <div id="map" style="width: 900px;height: 600px; border: 1px solid silver"></div>
+    <div id="map" ></div>
+    <div id="pulldown">   
+      <select>
+        
+      </select>   
+     </div>
 
     <h3><i class="fa-solid fa-link"></i>Links</h3>
     <ul>
@@ -58,17 +63,7 @@
             <a href="https://lujehle.github.io/top/">Nächste Etappe <i class="fa-solid fa-arrow-right"></i></a>
         </nav>
       </footer>
-
-      <script>
-        var map = L.map('map').setView([37.771389,-25.461944], 11);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-      }).addTo(map);
-      var marker = L.marker([37.771389, -25.461944]).addTo(map);
-      marker.bindPopup("<b>Welcome to São Miguel!</b><br>I am the largest Island of the Azores.").openPopup();
-        </script>
-    </ul>
+ </ul>
   
 </body>
 </html>

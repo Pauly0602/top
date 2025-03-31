@@ -30,7 +30,7 @@ let marker = L.marker([STOPS [i].lat,STOPS [i].lng]).addTo(map)
     <li> Geograph. Breite: ${STOPS [i].lat}°</li>
     <li> Geograph. Länge: ${STOPS [i].lng}°</li>
   </ul>
-    In the Marlborough Region of New Zealand's South Island.
+    Willkommen auf São Miguel- die größte Insel der Azoren.
     `);
 
     // auf eigene Etappe blicken und Popup öffnen 
@@ -51,7 +51,7 @@ let marker = L.marker([STOPS [i].lat,STOPS [i].lng]).addTo(map)
   }
 // auf Änderungen beim Pull-down reagieren 
 document.querySelector ('#pulldown select').onchange  = function (evt) {
-  let url = `https://${evt.target.value }.github.io/nz`
+  let url = `https://${evt.target.value }.github.io/top`
   //console.log (evt.target.value)
   //console.log (url)
   window.location = url;
