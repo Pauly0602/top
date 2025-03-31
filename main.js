@@ -9,7 +9,100 @@ let stop = {
   lng: -25.46,
   zoom: 11,
 };
-
+const STOPS = [
+  {
+    nr: 1,
+    user: "vintiyannick",
+},
+{
+    nr: 2,
+    user: "Ellinnaa",
+},
+{
+    nr: 3,
+    user: "samuesl",
+},
+ {  
+    nr: 4,
+    user:"Gregorysprenger2001",
+},
+{
+    nr: 5,
+    user: "lukas6020",
+},
+{
+    nr: 6,
+    user: "johannauniibk",
+},
+{
+    nr: 7,
+    user: "sam-uze",
+},
+{
+    nr: 8,
+    user: "webmapping",
+},
+{
+    nr: 9,
+    user: "cs4151",
+},
+{
+  user: "pauly0602",
+  nr: 10,
+  },
+{  
+    nr: 11,
+    user: "lujehle",
+},
+{
+    nr: 12,
+    user: "benmertens",
+},
+{
+    nr: 13,
+    user: "johaschra",
+},
+{
+    nr: 16,
+    user: "lizzie2911",
+},
+{
+  nr: 17,
+  user: "Kathleenuniibk",
+},
+{
+    nr: 18,
+    user: "Pruje839",
+},
+{
+    nr: 20,
+    user: "florentinebusch",
+},
+{
+    nr: 21,
+    user: "moplatt",
+},
+{
+    nr: 23,
+    user: "fritzcrone",
+},
+{
+    nr: 24,
+    user: "StephanPumpernik",
+},
+{
+    nr: 25,
+    user: "PriPh625",
+},
+{
+    nr: 26,
+    user: "Basti-10",
+},
+{
+    nr: 29,
+    user: 'jessimeteo',
+},
+]
 // Karte initialisieren
 let map = L.map('map')
 // Hintergrund definieren 
