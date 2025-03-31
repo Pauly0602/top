@@ -85,7 +85,7 @@ let stop = {
     zoom: 14,
 },
     {
-       title: "Azoren",
+  title: "Azoren",
   user: "pauly0602",
   nr: 10,
   lat: 37.77,
@@ -149,12 +149,12 @@ let stop = {
         zoom: 11,
     },
     {
-nr: 21,
-title: "Tafraoute",
-user: "moplatt",
-lat: 29.72222,
-lng: -8.97194,
-zoom: 11,
+     nr: 21,
+     title: "Tafraoute",
+     user: "moplatt",
+     lat: 29.72222,
+     lng: -8.97194,
+     zoom: 11,
     },
 {
     nr: 23,
