@@ -8,7 +8,8 @@ let stop = {
     lat: 37.77,
     lng: -25.46,
     zoom: 11,
-  }
+  };
+  
 // Stops der Lieblingsorte
 const STOPS = [
     {
