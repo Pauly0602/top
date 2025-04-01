@@ -9,7 +9,7 @@ let stop = {
     lng: -25.46,
     zoom: 11,
   };
-  
+
 // Stops der Lieblingsorte
 const STOPS = [
     {
@@ -219,14 +219,14 @@ for (let i = 0; i < STOPS.length; i++) {
     marker.bindPopup(`
         <h2>${STOPS[i].title}</h2>
         <ul>
-            <li>Geogr. Breite: ${STOPS[i].lat.toFixed(5)}°</li>
-            <li>Geogr. Länge:  ${STOPS[i].lng.toFixed(5)}°</li>
+           <li> Geograph. Breite: ${STOPS [i].lat}°</li>
+            <li> Geograph. Länge: ${STOPS [i].lng}°</li>
         </ul>
     `);
 
     //auf eigene Etappe blicken und öffnen
-    if (STOPS[i].user == "lujehle"){
-        console.log(STOPS[i].user, "meine Etappe :-)");
+    if (STOPS[i].user == "pauly0602"){
+        console.log(STOPS[i].user, "meine Etappe");
         map.setView([STOPS[i].lat, STOPS[i].lng], STOPS[i].zoom);
         marker.openPopup();
     }
