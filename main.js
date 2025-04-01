@@ -2,15 +2,15 @@
 Skript für Lieblingsort 
 */
 let stop = {
-  title: "Azoren",
-  user: "pauly0602",
-  nr: 10,
-  lat: 37.77,
-  lng: -25.46,
-  zoom: 11,
-}
-
-  const STOPS = [
+    title: "Azoren",
+    user: "pauly0602",
+    nr: 10,
+    lat: 37.77,
+    lng: -25.46,
+    zoom: 11,
+  }
+// Stops der Lieblingsorte
+const STOPS = [
     {
         lat: 45.109544,
         lng: 7.641281,
@@ -85,7 +85,7 @@ let stop = {
     zoom: 14,
 },
     {
-  title: "Azoren",
+       title: "Azoren",
   user: "pauly0602",
   nr: 10,
   lat: 37.77,
@@ -94,11 +94,11 @@ let stop = {
     },
     {
         nr: 11,
-        title: "Nelson",
+        title: "Sardinien",
         user: "lujehle",
-        lat: -41.270833,
-        lng: 173.284167,
-        zoom: 11,
+        lat: 40.027778,
+        lng: 9.069444,
+        zoom: 7,
     },
     {
         nr: 12,
@@ -142,19 +142,19 @@ let stop = {
     },
     {
         nr: 20,
-        title: "Doubtful Sound",
+        title: "Lieblingsort der Webmapperin: Singapur",
         user: "florentinebusch",
-        lat: -45.317222,
-        lng: 166.988333,
+        lat: 1.283333,
+        lng: 103.833333,
         zoom: 11,
     },
     {
-     nr: 21,
-     title: "Tafraoute",
-     user: "moplatt",
-     lat: 29.72222,
-     lng: -8.97194,
-     zoom: 11,
+nr: 21,
+title: "Tafraoute",
+user: "moplatt",
+lat: 29.72222,
+lng: -8.97194,
+zoom: 11,
     },
 {
     nr: 23,
@@ -199,49 +199,54 @@ nr: 29,
     },
 ];
 
-// Karte initialisieren
-let map = L.map('map')
-// Hintergrund definieren 
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+
+//Karte initialisieren
+let map = L.map('map');
+//Hintergrundkarte definieren
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-console.log(STOPS[0]);
-console.log(STOPS[0].title);
-for (let i=0; i<STOPS.length;i++) {
-  console.log (i, STOPS [i],STOPS [i].title );
-  // Marker zeichnen
-let marker = L.marker([STOPS [i].lat,STOPS [i].lng]).addTo(map)
- // Popup definieren 
- marker.bindPopup(`<h2>${STOPS [i].title}</h2>
-  <ul>
-    <li> Geograph. Breite: ${STOPS [i].lat}°</li>
-    <li> Geograph. Länge: ${STOPS [i].lng}°</li>
-  </ul>
-    Willkommen auf São Miguel- die größte Insel der Azoren.
+// loop über Etappen
+for (let i = 0; i < STOPS.length; i++) {
+    
+    //console.log(STOPS[i], STOPS[i].title);
+    //Marker zeichnen
+    let marker = L.marker([STOPS[i].lat, STOPS[i].lng]).addTo(map);
+    //Popup definieren 
+    marker.bindPopup(`
+        <h2>${STOPS[i].title}</h2>
+        <ul>
+            <li>Geogr. Breite: ${STOPS[i].lat.toFixed(5)}°</li>
+            <li>Geogr. Länge:  ${STOPS[i].lng.toFixed(5)}°</li>
+        </ul>
     `);
 
-    // auf eigene Etappe blicken und Popup öffnen 
-
-    if (STOPS [i].user == "pauly0602"){
-      map.setView([STOPS [i].lat, STOPS [i].lng], STOPS [i].zoom);
-      marker.openPopup();
+    //auf eigene Etappe blicken und öffnen
+    if (STOPS[i].user == "lujehle"){
+        console.log(STOPS[i].user, "meine Etappe :-)");
+        map.setView([STOPS[i].lat, STOPS[i].lng], STOPS[i].zoom);
+        marker.openPopup();
     }
 
-    // Pulldown Menü befüllen
-    let option = document.createElement ("option");
-    option.value = STOPS[i].user;
-    option.text = STOPS[i].title
-    if (STOPS [i].user == "pauly0602") {
-      option.selected = true;
-    }
-    document.querySelector("#pulldown select").appendChild (option);
-  }
-// auf Änderungen beim Pull-down reagieren 
-document.querySelector ('#pulldown select').onchange  = function (evt) {
-  let url = `https://${evt.target.value }.github.io/top`
-  //console.log (evt.target.value)
-  //console.log (url)
-  window.location = url;
+
+   //Pulldownmenü befüllen
+   let option = document.createElement("option");
+   option.value = STOPS[i].user;
+   option.text = STOPS[i].title;
+   if (STOPS[i].user == "lujehle") {
+       option.selected = true;
+   }
+   document.querySelector("#pulldown select").appendChild(option);
+   
+
+}
+
+// auf Änderungen beim Pulldown reagieren
+document.querySelector("#pulldown select").onchange = function(evt) {
+   let url = https://${evt.target.value}.github.io/nz;
+   //console.log(evt.target.value);
+   //console.log(url);
+   window.location = url;
 }
