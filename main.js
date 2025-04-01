@@ -236,7 +236,7 @@ for (let i = 0; i < STOPS.length; i++) {
    let option = document.createElement("option");
    option.value = STOPS[i].user;
    option.text = STOPS[i].title;
-   if (STOPS[i].user == "lujehle") {
+   if (STOPS[i].user == "pauly0602") {
        option.selected = true;
    }
    document.querySelector("#pulldown select").appendChild(option);
@@ -246,7 +246,7 @@ for (let i = 0; i < STOPS.length; i++) {
 
 // auf Änderungen beim Pulldown reagieren
 document.querySelector("#pulldown select").onchange = function(evt) {
-   let url = `https://${evt.target.value}.github.io/nz`;
+   let url = `https://${evt.target.value}.github.io/top`;
    //console.log(evt.target.value);
    //console.log(url);
    window.location = url;
