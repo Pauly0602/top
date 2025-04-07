@@ -203,6 +203,12 @@ nr: 29,
 
 //Karte initialisieren
 let map = L.map('map');
+
+// Maßstab in Karte 
+L.control.scale({
+    imperial: false 
+    }).addTo(map);
+    
 //Hintergrundkarte definieren
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
