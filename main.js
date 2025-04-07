@@ -206,7 +206,7 @@ let map = L.map('map');
 
 // Overlays definieren 
 let overlays = {
-    etappen: L.featureGroup().addTo(map), 
+    lieblingsorte: L.featureGroup().addTo(map), 
     }
 
 // Layercontrol 
