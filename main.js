@@ -204,11 +204,23 @@ nr: 29,
 //Karte initialisieren
 let map = L.map('map');
 
+// Overlays definieren 
+let overlays = {
+    etappen: L.featureGroup().addTo(map), 
+    }
+
+// Layercontrol 
+L.control.layers({
+    "OpenStreetMap": L.tileLayer.provider('OpenStreetMap.Mapnik'),
+    "OpenTopoMap": L.tileLayer.provider('OpenTopoMap'),
+    "Esri World Imagery": L.tileLayer.provider('Esri.WorldImagery'),
+}).addTo(map);
+
 // Maßstab in Karte 
 L.control.scale({
     imperial: false 
     }).addTo(map);
-    
+
 //Hintergrundkarte definieren
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
